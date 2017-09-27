@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+
 import grovepi
 import grove_rgb_lcd
 from grove_rgb_lcd import setRGB, setText, setText_norefresh
 from time import sleep
 from math import isnan
+import paho.mqtt.client as mqtt
 
 # import time
 # Sensor Input
@@ -15,13 +18,13 @@ relay = 8  # DC Port 8 - Relay
 led = 4  # DC Port 4 - Led
 buzzer = 7  # DC Port 7 - Buzzer
 
-grovepi.pinMode(dht_port, "INPUT")
-grovepi.pinMode(light, "INPUT")
-grovepi.pinMode(rotary, "INPUT")
+grovepi.pinMode(dht_port,"INPUT")
+grovepi.pinMode(light,"INPUT")
+grovepi.pinMode(rotary,"INPUT")
 
-grovepi.pinMode(relay, "OUTPUT")
-grovepi.pinMode(led, "OUTPUT")
-grovepi.pinMode(buzzer, "OUTPUT")
+grovepi.pinMode(relay,"OUTPUT")
+grovepi.pinMode(led,"OUTPUT")
+grovepi.pinMode(buzzer,"OUTPUT")
 
 # set orange as background color
 
