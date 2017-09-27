@@ -65,7 +65,7 @@ while True:
 
 	except KeyboardInterrupt as e:
 		print(str(e))
-		# since we're exiting the program
+		# since we're exiting the program3
 		# it's better to leave the LCD with a blank text
 		setText("")
 		break
