@@ -45,7 +45,7 @@ while True:
 	try:
 
 		[ temp,humi ] = grovepi.dht(dht_port,dht_type)
-		print("Temperature is",temp",C \t Humidity is", humi,"%")
+		print("Temperature is",temp,"C \t Humidity is", humi,"%")
 
 		if isnan(temp) is True or isnan(humi) is True:
 			raise TypeError('nan error')
