@@ -37,7 +37,7 @@ grovepi.pinMode(buzzer,"OUTPUT")
 
 
 #------------------------------------- ------------------------------------------#
-grove_rgb_lcd.setRGB(204,51,0)
+grove_rgb_lcd.setRGB(205,31,0)
 
 
 
