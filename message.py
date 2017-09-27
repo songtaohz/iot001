@@ -42,19 +42,19 @@ grove_rgb_lcd.setRGB(204,51,0)
 
 
 while True:
-    try:
+	try:
 
-        [ temp,humi ] = grovepi.dht(dht_port,dht_type)
-        print("Temperature is",temp",C \t Humidity is", humi,"%")
+		[ temp,humi ] = grovepi.dht(dht_port,dht_type)
+		print("Temperature is",temp",C \t Humidity is", humi,"%")
 
 		if isnan(temp) is True or isnan(humi) is True:
 			raise TypeError('nan error')
 
-        t = str(temp)
+		t = str(temp)
 		h = str(humi)
 
-        # instead of inserting a bunch of whitespace, we can just insert a \n
-        # we're ensuring that if we get some strange strings on one line, the 2nd one won't be affected
+		# instead of inserting a bunch of whitespace, we can just insert a \n
+		# we're ensuring that if we get some strange strings on one line, the 2nd one won't be affected
 		setText_norefresh("Temp:" + t + "C\n" + "Humidity :" + h + "%")
 
 	except (IOError, TypeError) as e:
